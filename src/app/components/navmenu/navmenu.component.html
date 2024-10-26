@@ -1,21 +1,24 @@
 <header>
-
     <h1>Nebulix</h1>
 
-    <nav class="navmenu">
+    <!-- Icono de menú para dispositivos móviles -->
+    <div class="menu-icon" (click)="toggleMenu()">
+        &#9776;
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav class="navmenu" [class.active]="menuOpen">
         <ul>
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Motos</a></li>
-            <li><a href="">Eventos</a></li>
-            <li><a href="">Nosotros</a></li>
-            <li><a href="">Contacto</a></li>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Motos</a></li>
+            <li><a href="#">Eventos</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
         </ul>
     </nav>
 
     <div class="butons">
-        <a href="">SIGN IN</a>
+        <a href="#">SIGN IN</a>
         <button id="registrarse">SIGN UP</button>
     </div>
-
-
 </header>

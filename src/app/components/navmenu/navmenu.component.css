@@ -1,3 +1,4 @@
+/* Estilos generales */
 header {
     width: 100%;
     height: 10vh;
@@ -5,88 +6,97 @@ header {
     max-width: 2000px;
     background-color: rgb(0, 0, 0);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
     z-index: 1;
-    
 }
 
 h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background: linear-gradient(to right, blue, rgb(0, 255, 234));
-    /* Cambia los colores del gradiente aquí */
     -webkit-background-clip: text;
-    /* Aplica el gradiente al área del texto */
     -webkit-text-fill-color: transparent;
-    font-size: 50px;
+    font-size: 30px;
 }
 
-.navmenu{
+/* Icono de menú para móviles */
+.menu-icon {
+    display: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
 
+/* Estilos del menú de navegación */
+.navmenu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Oculto fuera de pantalla */
+    height: 100vh;
+    width: 60%;
+    max-width: 300px;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.4s ease;
+    z-index: 10;
+}
+
+.navmenu.active {
+    right: 0; /* Aparece desde la derecha */
 }
 
 .navmenu ul {
-    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
 .navmenu ul li {
-    list-style: none;
-    margin: 20px;
+    margin: 20px 0;
 }
 
 .navmenu ul li a {
     text-decoration: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #fff;
-    font-size: 20px;
+    font-size: 24px;
 }
 
-
-
-
-
+/* Botones de SIGN IN y SIGN UP */
 .butons {
-    display: flex;
-    gap: 50px;
-    justify-content: center;
+    display: none; /* Ocultos en móviles */
+    gap: 20px;
     align-items: center;
-
 }
 
-.butons a{
+.butons a {
     text-decoration: none;
     color: #fff;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
-.butons button {
-    width: 150px;
+#registrarse {
+    width: 100px;
     height: 40px;
     border-radius: 20px;
-    position: relative;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #fff;
-    background-color: transparent; /* Fondo negro */
-    padding: 10px 20px; /* Espacio interno */
-    border: none;
-    overflow: hidden;
-    z-index: 1;
-    transition: .5s;
-}
-
-#ingresar:hover {
-    cursor: pointer;
-
-}
-
-#registrarse {
     background: linear-gradient(to left, #00eeff, #0004FF);
-    color: #fff;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
 }
 
-#registrarse:hover {
-    cursor: pointer;
+/* Mostrar icono de menú y ajustar estilo en dispositivos móviles */
+@media (max-width: 750px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .navmenu {
+        display: flex;
+    }
 }
