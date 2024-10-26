@@ -1,11 +1,162 @@
 .banner {
     width: 100%;
+    max-width: 2000px;
     height: 90vh;
     min-height: 500px;
-    max-height: 1200px;
+    max-height: 1000px;
     overflow: hidden;
-    background-color: rgb(22, 22, 22);
+    position: relative;
+    background: linear-gradient(rgb(0, 0, 0), #242424);
+    transition: .5s;
 }
+
+.moto {
+    position: absolute;
+    width: 100%;
+    max-width: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    animation: entradaMoto .3s ;
+    transition: .5s;
+}
+
+
+@keyframes entradaMoto{
+    0% {
+        transform: scale(1000%);
+        filter: drop-shadow(#fff 0px 0px 2);
+    }
+
+    100% {
+
+    }
+}
+
+
+.h1adelante {
+    width: 100%;
+    text-align: center;
+    user-select: none;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 350px;
+    color: #333333;
+    mask-image: linear-gradient(to top, transparent 20%, black);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: animacionMarca 1s;
+}
+
+.h1atras {
+    width: 100%;
+    text-align: center;
+    user-select: none;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 350px;
+    color: #505050;
+    mask-image: linear-gradient(to top, transparent 20%, black);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: animacionMarca 1s, brilloMarca 10s alternate infinite;
+}
+
+@keyframes animacionMarca {
+    0% {
+        transform: translate(-50%)
+    }
+
+    100% {
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+@keyframes brilloMarca {
+    0% {}
+
+    50% {}
+
+    100% {
+        color: #ffffff;
+        text-shadow: #ffffff 0px 0px 10px;
+    }
+}
+
+
+.banner h4 {
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(87, 87, 87));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    position: absolute;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    top: 40%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    animation: entraNombreMoto linear .3s ;
+}
+
+@keyframes entraNombreMoto {
+    0% {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {}
+}
+
+.banner h2 {
+    background: linear-gradient(to right, blue, rgb(0, 140, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 150px;
+    position: absolute;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    animation: entraNombreMoto linear .3s ;
+}
+
+
+
+
+
+
+
+.banner h3 {
+    color: rgb(22, 22, 22);
+    /* Texto transparente */
+    text-shadow:
+        -1px -1px 0 #cfcfcf,
+        1px -1px 0 #cfcfcf,
+        -1px 1px 0 #cfcfcf,
+        1px 1px 0 #cfcfcf,
+        0px -1px 0 #cfcfcf,
+        0px 1px 0 #cfcfcf,
+        -1px 0px 0 #cfcfcf,
+        1px 0px 0 #cfcfcf;
+    font-size: 250px;
+    position: absolute;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    top: 60%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    mask-image: linear-gradient(to top, transparent 20%, black);
+    animation: entraNombreMoto linear .3s ;
+}
+
+
+
 
 
 .presentacionMoto {
@@ -26,6 +177,7 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .card1 iframe {
     width: 100%;
     height: 100%;
@@ -44,7 +196,7 @@
     position: relative;
 }
 
-.card2 img{
+.card2 img {
     width: 100%;
     position: absolute;
     right: -2%;
@@ -54,27 +206,27 @@
 }
 
 
-.texts{
+.texts {
     width: 300px;
     height: 500px;
     position: absolute;
     z-index: 1;
     top: 50%;
     left: 50%;
-    transform: translate(50%,-50%);
+    transform: translate(50%, -50%);
     display: flex;
     flex-direction: column;
     text-align: start;
 }
 
-.texts h2{
+.texts h2 {
     text-transform: uppercase;
     font-size: 80px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #fff;
 }
 
-.texts p{
+.texts p {
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;

@@ -1,12 +1,12 @@
+
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navmenu',
   standalone: true,
-  imports: [],
+  imports: [RouterModule], 
   templateUrl: './navmenu.component.html',
-  styleUrl: './navmenu.component.css'
+  styleUrls: ['./navmenu.component.css']
 })
-export class NavmenuComponent {
-
-}
+export class NavmenuComponent { }
